@@ -1,0 +1,12 @@
+<div class="p-4 mb-3  bg-light rounded">
+<h4 class="widget-title">最新文章</h4>
+  <ul class="list-group">
+    {% for post in recent_post_list %}
+      <li>
+        <a href="{{ post.get_absolute_url }}" class="list-group-item list-group-item-action">{{ post.title }}</a>
+      </li>
+    {% empty %}
+      暂无文章！
+    {% endfor %}
+  </ul>
+</div>

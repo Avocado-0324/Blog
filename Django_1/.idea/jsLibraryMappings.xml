@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$" libraries="{bootstrap, default, github, highlight, highlight.js, highlightjs-line-numbers, jquery-3.5.1.slim, mono-blue, monokai-sublime, popper.js, railscasts, vs, zenburn}" />
+  </component>
+</project>

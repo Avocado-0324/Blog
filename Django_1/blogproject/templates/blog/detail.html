@@ -1,0 +1,48 @@
+{% extends 'Base.html' %}
+
+
+
+
+{% block main %}
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <h3 class="pb-4 mb-4 font-italic ">
+        Life is short,We should learn.
+          <hr class="py-1 my-2 bg-success">
+      </h3>
+
+      <div class="blog-post">
+        <h2 class="blog-post-title">
+        <a href="#" class="text-dark text-decoration-none font-weight-bold border-bottom">{{ post.title }}</a>
+        </h2>
+
+        <p class="blog-post-meta ">
+        <a href="#" class="text-dark font-italic">{{ post.category }}.</a>
+        <a href="#" class="text-dark font-italic">{{ post.created_time }}.</a>
+        <a href="#" class="text-dark font-italic">{{ post.author }}</a></p>
+
+
+        <p class="blog-post-body">
+         {{ post.body|safe }}
+        </p>
+
+
+      </div>
+
+{% endblock main %}
+
+
+
+{% block toc %}
+    {% if post.toc %}
+      <div class="p-4">
+        <h4 class="font-italic ">文章目录</h4>
+        <div class="toc" >
+          <ul class="bg-light">
+        {{ post.toc|safe }}
+          </ul>
+        </div>
+      </div>
+     {% endif %}
+{% endblock toc %}

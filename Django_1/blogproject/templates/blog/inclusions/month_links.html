@@ -1,0 +1,12 @@
+{% regroup dates by year as dates_by_year %}
+<ul>
+    {% for month in dates_by_year %}
+        <li>{{ month.grouper }}年
+            <a>
+                {% for d in month.list %}
+                    <li><a href="#">{{ d|date:'F' }}</li></a>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
